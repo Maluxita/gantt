@@ -1,0 +1,9 @@
+{% extends "reporte/base.html" %}
+{% block title %}Lista de Reporte Vial{% endblock title %}
+{% block contenido %}
+    <ul>
+        {% for reporte in reportes %}
+            <li>Num. Ticket: {{reporte.numdeticket}}, Tiempo de Evento: {{reporte.tiempo_evento}}, Motivo: {{reporte.motivo}}, Latitud{{reporte.latitud}}, Longitud: {{reporte.longitud}}</li>
+        {% endfor %}
+    </ul>
+{% endblock contenido %}
